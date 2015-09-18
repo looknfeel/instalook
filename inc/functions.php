@@ -25,7 +25,7 @@ function user_counts($query) {
 function user_media($id) {
 	// $response = json_decode(file_get_contents(build_query('/users/'.$id.'/media/recent?')), true);
 	$response = json_decode(file_get_contents(build_query('/users/'.$id.'/media/recent?')), true);
-	return $response['data'];
+	return array($response['data'], $response['pagination']);
 }
 
 function media_score($likes = 0, $comments = 0) {
