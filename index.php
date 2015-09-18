@@ -12,7 +12,8 @@
     <meta content='' name='description' />
     <meta content='' name='author' />
     <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-    <link href='css/style.css' rel='stylesheet' />
+    <link href='stylesheets/style.css' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <script src='js/modernizr-2.0.6.min.js'></script>
   </head>
   <body>
@@ -20,35 +21,81 @@
       <header></header>
       <div id='main' role='main'>
       	<?
-      	$client_id = "143663387";
       	if (!empty($_GET['user'])) {
-      		$user = $_GET['user'];
-      		$username_search_url = "https://api.instagram.com/v1/users/search?q=".$user."&access_token=143663387.a29d0b1.4625426751a842d08a9dae214fc0d42c";
-      		$username_search = json_decode(file_get_contents($username_search_url), true);
-      		// var_dump($username_search);
-      		$id = $username_search['data'][0]['id'];
+	      	include('inc/functions.php');
       		?>
-      		<img src="<?= $username_search['data'][0]['profile_picture'] ?>" alt="">
-      		<div>Username: <?= $username_search['data'][0]['username'] ?></div>
-      		<div>ID: <?= $id ?></div>
-      		<div>Full Name: <?= $username_search['data'][0]['full_name'] ?></div>
+      		<section class="profile">
+      			<div class="container">
+      				<img class="profile" src="<?= $info['profile_picture'] ?>" alt="">
+      				<div class="info">
+      					<div class="full_name"><?= $info['full_name'] ?></div>
+      					<div class="username">@<?= $info['username'] ?></div>
+      					<div class="id"><?= $info['id'] ?></div>
+      				</div>
+      				<div class="count">
+      					<div class="item"><?= $user_counts["media"] ?><br><span>posts</span></div>
+      					<div class="item"><?= $user_counts["followed_by"] ?><br><span>followers</span></div>
+      					<div class="item"><?= $user_counts["follows"] ?><br><span>following</span></div>
+      				</div>
+      			</div>
+      		</section>
+      		<?
+      		$medias = user_media($id);
+      		// var_dump($media);
+
+      		?>
+      		<section class="media">
+      			<div class="container">
+      				<? foreach ($medias as $key => $media) : ?>
+      					<div class="item">
+      						<div class="photo">
+      							<img class="photo" src="<?= $media['images']['low_resolution']['url'] ?>" alt="">
+      							<div class="info">
+      								<div class="inner_content">
+		      							<div class="date">
+			      							<? $date = strtime_to_data($media['created_time']) ?>
+		      								<div class="day"><?= $date[0] ?></div>
+		      								<div class="time"><?= $date[1] ?></div>
+	      								</div>
+      								</div>
+      							</div>
+      						</div>
+      						<section class="data">
+      							<? $count = media_score($media['likes']['count'], $media['comments']['count']) ?>
+      							<div class="left">
+	      							<div class="metrics like"><?= $count[0] ?></div>
+	      							<div class="metrics comment"><?= $count[1] ?></div>
+      							</div>
+      							<div class="metrics score"><?= $count[2] ?></div>
+      							<div class="metrics score"></div>
+      							<div class="percentage" style="width: <?= $count[3] ?>;"></div>
+      						</section>
+      					</div>
+      				<? endforeach; ?>
+      			</div>
+      		</section>
       		<?
       	} else {
       	?>
-      	<form action="">
-      		<input type="text" name="user">
-      		<input type="submit">
-      	</form>
+      		<section class="search">
+      			<div class="container">
+      				<form action="">
+      					<input type="text" name="user">
+      					<input type="submit" value="Procurar">
+      				</form>		
+      			</div>
+      		</section>
+		    	
       	<? } ?>
       </div>
       <footer></footer>
     </div>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
     <script>
-      window.jQuery || document.write("<script src='js/jquery-1.6.2.min.js'>\x3C/script>")
+      window.jQuery || document.write("<script src='javascripts/jquery-1.6.2.min.js'>\x3C/script>")
     </script>
-    <script src='js/plugins.js'></script>
-    <script src='js/script.js'></script>
+    <script src='javascripts/plugins.js'></script>
+    <script src='javascripts/script.js'></script>
     <script>
       var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
