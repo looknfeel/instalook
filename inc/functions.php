@@ -22,9 +22,12 @@ function user_counts($query) {
 	return $response['data']['counts'];
 }
 
-function user_media($id) {
-	// $response = json_decode(file_get_contents(build_query('/users/'.$id.'/media/recent?')), true);
-	$response = json_decode(file_get_contents(build_query('/users/'.$id.'/media/recent?')), true);
+function user_media($id, $pagination_url = NULL) {
+	if ($pagination_url !== NULL) {
+		$response = json_decode(file_get_contents($pagination_url), true);		
+	} else {
+		$response = json_decode(file_get_contents(build_query('/users/'.$id.'/media/recent?')), true);		
+	}
 	return array($response['data'], $response['pagination']);
 }
 
