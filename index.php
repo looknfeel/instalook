@@ -39,8 +39,18 @@
       				</div>
       			</div>
       		</section>
-      		<section class="media">
+      		<section>
       			<div class="container">
+      				<button class="sort" data-sort="likes:asc">+likes</button>
+      				<button class="sort" data-sort="likes:desc">-likes</button>
+      				<button class="sort" data-sort="comments:asc">+comments</button>
+      				<button class="sort" data-sort="comments:desc">-comments</button>
+      				<button class="sort" data-sort="score:asc">+score</button>
+      				<button class="sort" data-sort="score:desc">-score</button>
+      			</div>
+      		</section>
+      		<section class="media">
+      			<div class="container" id="test">
       				<? include('inc/_media.php'); ?>
       			</div>
       		</section>
@@ -58,10 +68,11 @@
       </div>
       <footer></footer>
     </div>
-    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+    <script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
     <script>
       window.jQuery || document.write("<script src='javascripts/jquery-1.6.2.min.js'>\x3C/script>")
     </script>
+    <script src='javascripts/jquery.mixitup.js'></script>
     <script src='javascripts/plugins.js'></script>
     <script src='javascripts/script.js'></script>
     <script>

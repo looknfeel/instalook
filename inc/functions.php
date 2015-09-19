@@ -28,7 +28,20 @@ function user_media($id, $pagination_url = NULL) {
 	} else {
 		$response = json_decode(file_get_contents(build_query('/users/'.$id.'/media/recent?')), true);		
 	}
-	return array($response['data'], $response['pagination']);
+
+	// var_dump(count($response['pagination']));
+	if (count($response['pagination']) > 0) {
+		$next = true;
+	} else {
+		$next = false;
+	}
+
+	if (isset($response['pagination']['next_url'])) {
+		$next_url = $response['pagination']['next_url'];
+	} else {
+		$next_url = NULL;
+	}
+	return array($response['data'], $next, $next_url);
 }
 
 function media_score($likes = 0, $comments = 0) {
