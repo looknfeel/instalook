@@ -20,25 +20,6 @@
     <div id='container'>
       <header></header>
       <div id='main' role='main'>
-      	<?
-      	if (!empty($_GET['user'])) {
-	      	include('inc/functions.php');
-      		?>
-      		<section class="profile">
-      			<div class="container">
-      				<img class="profile" src="<?= $info['profile_picture'] ?>" alt="">
-      				<div class="info">
-      					<div class="full_name"><?= $info['full_name'] ?></div>
-      					<div class="username">@<?= $info['username'] ?></div>
-      					<div class="id"><?= $info['id'] ?></div>
-      				</div>
-      				<div class="count">
-      					<div class="item"><?= $user_counts["media"] ?><br><span>posts</span></div>
-      					<div class="item"><?= $user_counts["followed_by"] ?><br><span>followers</span></div>
-      					<div class="item"><?= $user_counts["follows"] ?><br><span>following</span></div>
-      				</div>
-      			</div>
-      		</section>
       		<section>
       			<div class="container">
       				<button class="sort" data-sort="likes:asc">+likes</button>
@@ -49,31 +30,33 @@
       				<button class="sort" data-sort="score:desc">-score</button>
       				<button class="sort" data-sort="date:asc">+date</button>
       				<button class="sort" data-sort="date:desc">-date</button>
-      				<br><br>
-      				<button class="filter" data-filter="all">all</button>
-      				<? foreach (lastMonths() as $key => $value) : ?>
-      					<button class="filter" data-filter=".month-<?= $value ?>"><?= $key ?></button>
-							<? endforeach; ?>
+      				<button class="filter" data-filter=".month-01">1</button>
+      				<button class="filter" data-filter=".month-02">2</button>
+      				<button class="filter" data-filter=".month-03">3</button>
+      				<button class="filter" data-filter=".month-04">4</button>
+      				<button class="filter" data-filter=".month-05">5</button>
+      				<button class="filter" data-filter=".month-06">6</button>
+      				<button class="filter" data-filter=".month-07">7</button>
+      				<button class="filter" data-filter=".month-08">8</button>
+      				<button class="filter" data-filter=".month-09">9</button>
+      				<button class="filter" data-filter=".month-10">10</button>
+      				<button class="filter" data-filter=".month-11">11</button>
+      				<button class="filter" data-filter=".month-12">12</button>
       			</div>
       		</section>
       		<section class="media">
       			<div class="container">
-      				<? include('inc/_media.php'); ?>
-      				<div class="gap"></div>
-  						<div class="gap"></div>
+      				<div class="item mix month-01"></div>
+      				<div class="item mix month-02"></div>
+      				<div class="item mix month-03"></div>
+      				<div class="item mix month-04"></div>
+      				<div class="item mix month-05"></div>
+      				<div class="item mix month-06"></div>
+      				<div class="item mix month-07"></div>
+      				<div class="item mix month-08"></div>
+      				<div class="item mix month-09"></div>
       			</div>
       		</section>
-      		<? } else { ?>
-      		<section class="search">
-      			<div class="container">
-      				<form action="">
-      					<input type="text" name="user">
-      					<input type="submit" value="Procurar">
-      				</form>		
-      			</div>
-      		</section>
-		    	
-      	<? } ?>
       </div>
       <footer></footer>
     </div>

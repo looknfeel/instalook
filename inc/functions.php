@@ -47,13 +47,30 @@ function user_media($id, $pagination_url = NULL) {
 function media_score($likes = 0, $comments = 0) {
 	$c_score = $comments * 3;
 	$score = $likes + $c_score;
-	$l_percentage = (($likes/$score)*100).'%';
+	$l_percentage = number_format((($likes/$score)*100)).'%';
 	return array($likes, $comments, $score, $l_percentage);
 }
 
-function strtime_to_data($time) {
+function unixtimestamp_to_data($time) {
 	$date = explode(", ", date("m.d.y, H:i:s", $time));
+	$date[] .= date("y/m/d:H.i.s", $time);
+	$date[] .= date("m-y", $time);
 	return $date;
+}
+
+function lastMonths() {
+	setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+	date_default_timezone_set('America/Sao_Paulo');
+	$dates = array();
+	$slugs = array();
+	for ($i=0; $i <= 12; $i++) { 
+		$date = mktime(0,0,0,date('m')-$i,date('d'),date('Y'));
+		// echo strftime('%A, %d de %B de %Y', $date).'<br>';
+		$dates[] .= strftime('%B/%y', $date);
+		$slugs[] .= strftime('%m-%y', $date);
+	}
+
+	return $months = array_combine($dates ,$slugs);
 }
 
 ?>
