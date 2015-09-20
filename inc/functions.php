@@ -1,5 +1,8 @@
 <?
 
+setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+date_default_timezone_set('America/Sao_Paulo');
+
 $user = $_GET['user'];
 $info = search_user($user);
 $id = $info['id'];
@@ -19,7 +22,7 @@ function search_user($query) {
 
 function user_counts($query) {
 	$response = json_decode(file_get_contents(build_query('/users/'.$query.'?')), true);
-	return $response['data']['counts'];
+	return array($response['data']['counts'], $response['data']['bio']);
 }
 
 function user_media($id, $pagination_url = NULL) {
@@ -29,7 +32,6 @@ function user_media($id, $pagination_url = NULL) {
 		$response = json_decode(file_get_contents(build_query('/users/'.$id.'/media/recent?')), true);		
 	}
 
-	// var_dump(count($response['pagination']));
 	if (count($response['pagination']) > 0) {
 		$next = true;
 	} else {
@@ -46,27 +48,25 @@ function user_media($id, $pagination_url = NULL) {
 
 function media_score($likes = 0, $comments = 0) {
 	$c_score = $comments * 3;
-	$score = $likes + $c_score;
+	$score = number_format($likes + $c_score);
 	$l_percentage = number_format((($likes/$score)*100)).'%';
 	return array($likes, $comments, $score, $l_percentage);
 }
 
 function unixtimestamp_to_data($time) {
-	$date = explode(", ", date("m.d.y, H:i:s", $time));
-	$date[] .= date("y/m/d:H.i.s", $time);
+	$date = explode(", ", date("d.m.y, H\hi", $time));
+	$date[] .= date("y/m/d:H.i", $time);
 	$date[] .= date("m-y", $time);
 	return $date;
 }
 
 function lastMonths() {
-	setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
-	date_default_timezone_set('America/Sao_Paulo');
 	$dates = array();
 	$slugs = array();
 	for ($i=0; $i <= 12; $i++) { 
 		$date = mktime(0,0,0,date('m')-$i,date('d'),date('Y'));
 		// echo strftime('%A, %d de %B de %Y', $date).'<br>';
-		$dates[] .= strftime('%B/%y', $date);
+		$dates[] .= strftime('%b/%y', $date);
 		$slugs[] .= strftime('%m-%y', $date);
 	}
 

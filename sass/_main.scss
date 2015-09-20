@@ -4,6 +4,7 @@ $base: #ECEFF1;
 $dark: #263238;
 $dark2: #263238;
 $orange: #f04e23;
+$link: #4280ca;
 
 html, body{font-family: $open_sans;}
 
@@ -24,12 +25,16 @@ section{
 		input[type=submit]{padding: 12px; }
 	}
 	&.profile{
-		img.profile{width: 150px; height: 150px; border-radius: 50%; position: relative; float: left; border: 3px solid $orange;}
+		img.profile{width: 150px; height: 150px; border-radius: 50%; position: relative; float: left; border: 6px solid $orange;}
 		.info{
 			position: relative; float: left; margin-left: 30px;
 			.full_name{font-size: 40px; line-height: 1em; color: $orange;}
 			.username{font-size: 20px; font-weight: bolder; color: $dark;}
 			.id{font-size: 12px; font-weight: lighter;}
+			.bio{
+				font-size: 14px; font-weight: lighter; max-width: 400px; padding-top: 10px; margin-top: 10px;
+				&:before{content: ' '; width: 50px; height: 1px; background-color: #ccc; position: absolute; margin-top: -10px;}
+			}
 		}
 		.count{
 			position: absolute; right: 0; top: 50%; transform: translateY(-50%);
@@ -74,15 +79,14 @@ section{
 			}
 			&:hover{
 				opacity: 1 !important;
-				-webkit-transform: scale(1.05);
-				-ms-transform: scale(1.05);
-				-o-transform: scale(1.05);
-				transform: scale(1.05);
-				// .photo{
-				// 	.info{
-				// 		opacity: 1; visibility: visible;
-				// 	}
-				// }
+				-webkit-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05); transform: scale(1.05);
+			}
+			&:active{
+				.photo{
+					.info{
+						opacity: 1; visibility: visible;
+					}
+				}
 			}
 		}
 		.container{
@@ -90,11 +94,30 @@ section{
 				.item{opacity: .7;}
 			}
 		}
-	}	
+	}
+	&.controls{
+		.order, .filters{position: relative; float: right; margin: 5px;}
+		button{
+			position: relative; float: left; background-color: transparent; border: 1px solid $link; border-radius: 3px; font-family: $open_sans; font-size: 12px; color: $link; padding: 1px 2px; margin: 0 1px; font-weight: lighter;
+			&:hover, &.active{background-color: $link; color: white;}
+			&:active{background-color: darken($link, 10deg); color: white; border-color: $link;}
+			&[data-sort='likes:asc'], &[data-sort='comments:asc'],&[data-sort='score:asc'],&[data-sort='date:asc']{
+				&:before{content: '↓ ';}
+			}
+			&[data-sort='likes:desc'], &[data-sort='comments:desc'],&[data-sort='score:desc'],&[data-sort='date:desc']{
+				&:before{content: '↑ ';}
+			}
+			&.filter{margin: 0 2px; padding: 2px 3px;}
+		}
+		.indicator{position: relative; float: left; border-radius: 3px; font-family: $open_sans; font-size: 12px; color: $link; margin: 1px 20px 1px 4px;}
+	}
 }
 
 *{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+}
+* {
+    outline: none;
 }

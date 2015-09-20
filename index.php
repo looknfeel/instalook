@@ -31,29 +31,37 @@
       					<div class="full_name"><?= $info['full_name'] ?></div>
       					<div class="username">@<?= $info['username'] ?></div>
       					<div class="id"><?= $info['id'] ?></div>
+      					<div class="bio"><?= $user_counts[1] ?></div>
       				</div>
       				<div class="count">
-      					<div class="item"><?= $user_counts["media"] ?><br><span>posts</span></div>
-      					<div class="item"><?= $user_counts["followed_by"] ?><br><span>followers</span></div>
-      					<div class="item"><?= $user_counts["follows"] ?><br><span>following</span></div>
+      					<div class="item"><?= $user_counts[0]["media"] ?><br><span>posts</span></div>
+      					<div class="item"><?= $user_counts[0]["followed_by"] ?><br><span>seguidores</span></div>
+      					<div class="item"><?= $user_counts[0]["follows"] ?><br><span>seguindo</span></div>
       				</div>
       			</div>
       		</section>
-      		<section>
+      		<section class="controls">
       			<div class="container">
-      				<button class="sort" data-sort="likes:asc">+likes</button>
-      				<button class="sort" data-sort="likes:desc">-likes</button>
-      				<button class="sort" data-sort="comments:asc">+comments</button>
-      				<button class="sort" data-sort="comments:desc">-comments</button>
-      				<button class="sort" data-sort="score:asc">+score</button>
-      				<button class="sort" data-sort="score:desc">-score</button>
-      				<button class="sort" data-sort="date:asc">+date</button>
-      				<button class="sort" data-sort="date:desc">-date</button>
-      				<br><br>
-      				<button class="filter" data-filter="all">all</button>
-      				<? foreach (lastMonths() as $key => $value) : ?>
-      					<button class="filter" data-filter=".month-<?= $value ?>"><?= $key ?></button>
-							<? endforeach; ?>
+      				<div class="order">
+	      				<button class="sort" data-sort="likes:asc"></button>
+	      				<button class="sort" data-sort="likes:desc"></button>
+	      				<div class="indicator">curtidas</div>
+	      				<button class="sort" data-sort="comments:asc"></button>
+	      				<button class="sort" data-sort="comments:desc"></button>
+	      				<div class="indicator">comentários</div>
+	      				<button class="sort" data-sort="score:asc"></button>
+	      				<button class="sort" data-sort="score:desc"></button>
+	      				<div class="indicator">pontuação</div>
+	      				<button class="sort" data-sort="date:asc"></button>
+	      				<button class="sort" data-sort="date:desc"></button>
+	      				<div class="indicator">data</div>
+      				</div>
+      				<div class="filters">
+	      				<button class="filter" data-filter="all">all</button>
+	      				<? foreach (lastMonths() as $key => $value) : ?>
+	      					<button class="filter" data-filter=".month-<?= $value ?>"><?= $key ?></button>
+								<? endforeach; ?>
+							</div>
       			</div>
       		</section>
       		<section class="media">
