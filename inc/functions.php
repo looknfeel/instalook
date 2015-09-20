@@ -49,7 +49,7 @@ function user_media($id, $pagination_url = NULL) {
 function media_score($likes = 0, $comments = 0) {
 	$c_score = $comments * 3;
 	$score = number_format($likes + $c_score);
-	$l_percentage = number_format((($likes/$score)*100)).'%';
+	$l_percentage = number_format((($c_score/$score)*100)).'%';
 	return array($likes, $comments, $score, $l_percentage);
 }
 
@@ -57,6 +57,10 @@ function unixtimestamp_to_data($time) {
 	$date = explode(", ", date("d.m.y, H\hi", $time));
 	$date[] .= date("y/m/d:H.i", $time);
 	$date[] .= date("m-y", $time);
+	$dsince = date("d", (time() - $time));
+	if ($dsince <= 7) {
+		$date[] .= "day-7";
+	}
 	return $date;
 }
 

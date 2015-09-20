@@ -12,7 +12,7 @@ $first = true;
 		foreach ($medias as $key => $media) : ?>
 			<? $count = media_score($media['likes']['count'], $media['comments']['count']) ?>
 			<? $date = unixtimestamp_to_data($media['created_time']) ?>
-			<div class="item mix <?= 'month-'.$date[3] ?>" data-likes="<?= $count[0] ?>" data-comments="<?= $count[1] ?>" data-score="<?= $count[2] ?>" data-date="<?= $date[2] ?>" data-month="<?= 'm-'.$date[3] ?>">
+			<div class="item mix <?= 'month-'.$date[3] ?> <?= $date[4] ?>" data-likes="<?= $count[0] ?>" data-comments="<?= $count[1] ?>" data-score="<?= $count[2] ?>" data-date="<?= $date[2] ?>" data-month="<?= 'm-'.$date[3] ?>">
 				<div class="photo">
 					<img class="photo" src="<?= $media['images']['low_resolution']['url'] ?>" alt="">
 					<div class="info">

@@ -58,8 +58,9 @@
       				</div>
       				<div class="filters">
 	      				<button class="filter" data-filter="all">all</button>
-	      				<? foreach (lastMonths() as $key => $value) : ?>
-	      					<button class="filter" data-filter=".month-<?= $value ?>"><?= $key ?></button>
+	      				<button class="filter" data-filter=".day-7">últimos 7 dias</button>
+	      				<? foreach (lastMonths() as $mes => $class) : ?>
+	      					<button class="filter" data-filter=".month-<?= $class ?>"><?= $mes ?></button>
 								<? endforeach; ?>
 							</div>
       			</div>
@@ -67,8 +68,6 @@
       		<section class="media">
       			<div class="container">
       				<? include('inc/_media.php'); ?>
-      				<div class="gap"></div>
-  						<div class="gap"></div>
       			</div>
       		</section>
       		<? } else { ?>
