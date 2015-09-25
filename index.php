@@ -56,13 +56,18 @@
 	      				<button class="sort" data-sort="date:desc"></button>
 	      				<div class="indicator">data</div>
       				</div>
+      				<br><br>
       				<div class="filters">
-	      				<button class="filter" data-filter="all">all</button>
-	      				<button class="filter" data-filter=".day-7">últimos 7 dias</button>
+	      				<button class="filter month" data-filter="all">all</button>
 	      				<? foreach (lastMonths() as $mes => $class) : ?>
-	      					<button class="filter" data-filter=".month-<?= $class ?>"><?= $mes ?></button>
+	      					<button class="filter month" data-filter=".<?= $class ?>"><?= $mes ?></button>
 								<? endforeach; ?>
 							</div>
+      			</div>
+      		</section>
+      		<section class="graphs">
+      			<div class="container">
+      				
       			</div>
       		</section>
       		<section class="media">

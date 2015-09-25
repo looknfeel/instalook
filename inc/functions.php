@@ -60,6 +60,8 @@ function unixtimestamp_to_data($time) {
 	$dsince = date("d", (time() - $time));
 	if ($dsince <= 7) {
 		$date[] .= "day-7";
+	} else {
+		$date[] .= "day-more-7";
 	}
 	return $date;
 }
