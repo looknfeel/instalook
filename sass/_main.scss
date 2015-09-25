@@ -24,6 +24,9 @@ section{
 		input{width: 80%; position: relative; left: 10%; height: 60px; font-size: 26px;}
 		input[type=submit]{padding: 12px; }
 	}
+	&.graphs{
+		background-color: darken($base, 4deg); padding: 10px 0;
+	}
 	&.profile{
 		img.profile{width: 150px; height: 150px; border-radius: 50%; position: relative; float: left; border: 6px solid $orange;}
 		.info{

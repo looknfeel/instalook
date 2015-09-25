@@ -67,7 +67,7 @@
       		</section>
       		<section class="graphs">
       			<div class="container">
-      				
+      				<canvas id="myChart" width="1000px" height="300px"></canvas>
       			</div>
       		</section>
       		<section class="media">
@@ -94,6 +94,7 @@
       window.jQuery || document.write("<script src='javascripts/jquery-1.6.2.min.js'>\x3C/script>")
     </script>
     <script src='javascripts/jquery.mixitup.js'></script>
+    <script src='javascripts/chart.min.js'></script>
     <script src='javascripts/plugins.js'></script>
     <script src='javascripts/script.js'></script>
     <script>
