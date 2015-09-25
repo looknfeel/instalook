@@ -48,7 +48,7 @@ function user_media($id, $pagination_url = NULL) {
 
 function media_score($likes = 0, $comments = 0) {
 	$c_score = $comments * 3;
-	$score = number_format($likes + $c_score);
+	$score = $likes + $c_score;
 	if ($score == 0) {
 		$score = 1;
 	}
@@ -59,7 +59,7 @@ function media_score($likes = 0, $comments = 0) {
 function unixtimestamp_to_data($time) {
 	$date = explode(", ", date("d.m.y, H\hi", $time));
 	$date[] .= date("y/m/d:H.i", $time);
-	$date[] .= date("m-y", $time);
+	$date[] .= date("y-m", $time);
 	$dsince = date("d", (time() - $time));
 	if ($dsince <= 7) {
 		$date[] .= "day-7";
@@ -76,7 +76,7 @@ function lastMonths() {
 		$date = mktime(0,0,0,date('m')-$i,date('d'),date('Y'));
 		// echo strftime('%A, %d de %B de %Y', $date).'<br>';
 		$dates[] .= strftime('%b/%y', $date);
-		$slugs[] .= strftime('%m-%y', $date);
+		$slugs[] .= strftime('%y-%m', $date);
 	}
 
 	return $months = array_combine($dates ,$slugs);

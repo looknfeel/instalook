@@ -87,9 +87,9 @@ function graph() {
 		scoreData.push(currentScore);
 	});
 
-	console.log(likesData);
-	console.log(commentsData);
-	console.log(scoreData);
+	// console.log(likesData);
+	// console.log(commentsData);
+	// console.log(scoreData);
 
 	var data = {
 	    labels: monthsWithPosts,

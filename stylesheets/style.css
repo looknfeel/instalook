@@ -545,7 +545,7 @@ section.search input[type=submit] {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000327}}
 section.graphs {
   background-color: #e0e5e8;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000331}}
 section.profile img.profile {
