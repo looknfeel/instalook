@@ -84,7 +84,8 @@ function graphData() {
 function graphLabels() {
 	labels = [];
 	for (var i = 0; i < postCount.length; i++) {
-		labels[i] = monthsWithPosts[i]+" ("+postCount[i]+")";
+		var monthLabel = $(".filter[data-filter=\\."+monthsWithPosts[i]+"]").text();
+		labels[i] = monthLabel+" ("+postCount[i]+")";
 	};
 }
 
