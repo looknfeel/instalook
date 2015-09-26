@@ -23,6 +23,7 @@ $first = true;
 							</div>
 						</div>
 					</div>
+					<div class="status"></div>
 				</div>
 				<section class="data">
 					<div class="left">

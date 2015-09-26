@@ -43,6 +43,36 @@ function eliminatesMonthsFilterNotExistant() {
 	monthsWithPosts.sort();
 }
 
+function defineMediaAverageScore() {
+	var sum = 0;
+	var posts = $(".item.mix:visible");
+	posts.each(function(){
+	  sum += parseInt( $(this).attr("data-score"), 10 ); //don't forget to add the base
+	});
+
+	var avg = (sum/posts.length).toFixed(2);
+	console.log(avg);
+	return avg;
+}
+
+function mediaApproval() {
+	$(".status").removeClass("green red");
+	setTimeout(function(){
+		var average = defineMediaAverageScore();
+		var posts = $(".item.mix:visible");
+		posts.each(function(){
+			var media = $(this);
+			var current = parseInt(media.attr("data-score"));
+			var status = media.find(".status");
+			if (current >= average) {
+				status.addClass("green");
+			} else {
+				status.addClass("red");
+			}
+		});
+	}, 2000);
+}
+
 function graphData() {
 	likesData = [];
 	commentsData = [];
@@ -168,4 +198,11 @@ function monthsCompare() {
 	graph();
 }
 
-monthsCompare();
+$(document).ready(function(){
+	monthsCompare();
+	mediaApproval();
+});
+
+$(".filter").click(function(){
+	mediaApproval();
+});
