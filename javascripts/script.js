@@ -43,6 +43,51 @@ function eliminatesMonthsFilterNotExistant() {
 	monthsWithPosts.sort();
 }
 
+function graphData() {
+	likesData = [];
+	commentsData = [];
+	scoreData = [];
+	averageData = [];
+	postCount = [];
+	$.each(monthsWithPosts, function(){
+		currentLikes = 0;
+		currentComments = 0;
+		currentScore = 0;
+		currentPosts = 0;
+
+		$(".item[data-month="+this+"]").each(function(){
+			currentLikes = parseInt(currentLikes) + parseInt($(this).attr("data-likes"));
+			currentPosts++;
+		});
+
+		$(".item[data-month="+this+"]").each(function(){
+			currentComments = parseInt(currentComments) + parseInt($(this).attr("data-comments"));
+		});
+
+		$(".item[data-month="+this+"]").each(function(){
+			currentScore = parseInt(currentScore) + parseInt($(this).attr("data-score"));
+		});
+
+		likesData.push(currentLikes);
+		commentsData.push(currentComments);
+		scoreData.push(currentScore);
+		postCount.push(currentPosts);
+	});
+
+	for (var i = 0; i < scoreData.length; i++) {
+		var currentAverage = parseFloat(scoreData[i] / postCount[i]);
+		var currentAverage = Math.round(currentAverage).toFixed(2);
+		averageData.push(currentAverage);
+	};
+}
+
+function graphLabels() {
+	labels = [];
+	for (var i = 0; i < postCount.length; i++) {
+		labels[i] = monthsWithPosts[i]+" ("+postCount[i]+")";
+	};
+}
+
 function graph() {
 	var options = {                                   // /Boolean - Whether grid lines are shown across the chart
 	    scaleShowGridLines : true,                    // String - Colour of the grid lines
@@ -62,37 +107,11 @@ function graph() {
 	    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 	};
 
-	likesData = [];
-	commentsData = [];
-	scoreData = [];
-	$.each(monthsWithPosts, function(){
-		currentLikes = 0;
-		currentComments = 0;
-		currentScore = 0;
-
-		$(".item[data-month="+this+"]").each(function(){
-			currentLikes = parseInt(currentLikes) + parseInt($(this).attr("data-likes"));
-		});
-
-		$(".item[data-month="+this+"]").each(function(){
-			currentComments = parseInt(currentComments) + parseInt($(this).attr("data-comments"));
-		});
-
-		$(".item[data-month="+this+"]").each(function(){
-			currentScore = parseInt(currentScore) + parseInt($(this).attr("data-score"));
-		});
-
-		likesData.push(currentLikes);
-		commentsData.push(currentComments);
-		scoreData.push(currentScore);
-	});
-
-	// console.log(likesData);
-	// console.log(commentsData);
-	// console.log(scoreData);
+	graphData();
+	graphLabels();
 
 	var data = {
-	    labels: monthsWithPosts,
+	    labels: labels,
 	    datasets: [
 	    		{
 	    		    label: "score",
@@ -123,6 +142,16 @@ function graph() {
 	            pointHighlightFill: "#fff",
 	            pointHighlightStroke: "rgba(220,220,220,1)",
 	            data: commentsData
+	        },
+	        {
+	            label: "media",
+	            fillColor: "rgba(96,125,139,0)",
+	            strokeColor: "rgba(96,125,139,1)",
+	            pointColor: "rgba(96,125,139,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(220,220,220,1)",
+	            data: averageData
 	        }
 	    ]
 	};
