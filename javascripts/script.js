@@ -36,7 +36,7 @@ function eliminatesMonthsFilterNotExistant() {
 		if (currentMonths.indexOf(filterAttribute) > -1) {
 			monthsWithPosts.push(filterAttribute);
 		} else {
-			$(this).hide();
+			$(this).remove();
 		}
 	});
 	monthsWithPosts.shift();
