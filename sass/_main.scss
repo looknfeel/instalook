@@ -6,6 +6,9 @@ $dark2: #263238;
 $orange: #f04e23;
 $link: #4280ca;
 
+$positive: #CDDC39;
+$negative: #F44336;
+
 html, body{font-family: $open_sans;}
 
 header{width: 100%; height: 100px; background-color: $orange}
@@ -58,8 +61,8 @@ section{
 				img.photo{width: 100%}
 				.status{
 					width: 18px; height: 18px; position: absolute; top: 0; margin: 10px; background-color: darken($base, 8deg); border: 2px solid white; border-radius: 50%; box-shadow: 0 0 7px transparentize(black, .5);
-					&.green{background-color: #CDDC39;}
-					&.red{background-color: #F44336;}
+					&.green{background-color: $positive;}
+					&.red{background-color: $negative;}
 				}
 				.info{
 					width: 100%; height: 100%; position: absolute; top: 0px; background-color: transparentize(black, .7); line-height: normal; text-align: center; opacity: 0; visibility: hidden;
@@ -81,7 +84,7 @@ section{
 					&.comment:before{content: url("../img/comment.svg"); background-size: 10px 20px; position: relative; float: left; margin-right: 8px; margin-top: -1px;}
 				}
 				.percentage{
-					height: 2px; background-color: $orange; position: absolute; bottom: 0;
+					height: 2px; background-color: $link; position: absolute; bottom: 0;
 					&:after{content: ' '; }
 				}
 			}
@@ -104,6 +107,7 @@ section{
 		}
 	}
 	&.controls{
+		padding: 0 0 40px;
 		.order, .filters{position: relative; float: right; margin: 5px;}
 		button{
 			position: relative; float: left; background-color: transparent; border: 1px solid $link; border-radius: 3px; font-family: $open_sans; font-size: 12px; color: $link; padding: 1px 2px; margin: 0 1px; font-weight: lighter;
@@ -115,7 +119,16 @@ section{
 			&[data-sort='likes:desc'], &[data-sort='comments:desc'],&[data-sort='score:desc'],&[data-sort='date:desc']{
 				&:before{content: '↑ ';}
 			}
-			&.filter{margin: 0 2px; padding: 2px 3px;}
+			&.filter{
+				margin: 0 2px; padding: 2px 3px;
+				span.percentage{
+					position: absolute; font-size: 10px; background-color: $positive; color: white; padding: 3px 4px; bottom: -24px; border-radius: inherit; right: 0; transform: translate(50%);
+					&.positive{background-color: $positive;}
+					&.negative{background-color: $negative;
+						// top: -24px; bottom: initial;
+					}
+				}
+			}
 		}
 		.indicator{position: relative; float: left; border-radius: 3px; font-family: $open_sans; font-size: 12px; color: $link; margin: 1px 20px 1px 4px;}
 	}
@@ -125,7 +138,5 @@ section{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-}
-* {
-    outline: none;
+	outline: none;
 }

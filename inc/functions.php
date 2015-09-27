@@ -79,7 +79,9 @@ function lastMonths() {
 		$slugs[] .= strftime('%y-%m', $date);
 	}
 
-	return $months = array_combine($dates ,$slugs);
+	$months = array_reverse(array_combine($dates ,$slugs));
+
+	return $months;
 }
 
 ?>

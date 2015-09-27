@@ -488,19 +488,19 @@ body, select, input, textarea {
 
   /* Style adjustments for print go here */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000312}}
 html, body {
   font-family: "Open Sans";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000314}}
 header {
   width: 100%;
   height: 100px;
   background-color: #f04e23;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000316}}
 section {
   width: 100%;
   position: relative;
@@ -508,7 +508,7 @@ section {
   background-color: #ECEFF1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000319}}
 .container {
   width: 1000px;
   position: relative;
@@ -517,20 +517,20 @@ section {
   margin-left: -500px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000321}}
 .inner_content {
   padding: 20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000323}}
 section {
   padding-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000325}}
 section:first-child {
   padding-top: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000327}}
 section.search input {
   width: 80%;
   position: relative;
@@ -538,16 +538,16 @@ section.search input {
   height: 60px;
   font-size: 26px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000328}}
 section.search input[type=submit] {
   padding: 12px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000330}}
 section.graphs {
   background-color: #e0e5e8;
   padding: 20px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000334}}
 section.profile img.profile {
   width: 150px;
   height: 150px;
@@ -556,30 +556,30 @@ section.profile img.profile {
   float: left;
   border: 6px solid #f04e23;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000335}}
 section.profile .info {
   position: relative;
   float: left;
   margin-left: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000337}}
 section.profile .info .full_name {
   font-size: 40px;
   line-height: 1em;
   color: #f04e23;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000338}}
 section.profile .info .username {
   font-size: 20px;
   font-weight: bolder;
   color: #263238;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000339}}
 section.profile .info .id {
   font-size: 12px;
   font-weight: lighter;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000340}}
 section.profile .info .bio {
   font-size: 14px;
   font-weight: lighter;
@@ -587,7 +587,7 @@ section.profile .info .bio {
   padding-top: 10px;
   margin-top: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000342}}
 section.profile .info .bio:before {
   content: ' ';
   width: 50px;
@@ -596,14 +596,14 @@ section.profile .info .bio:before {
   position: absolute;
   margin-top: -10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000345}}
 section.profile .count {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000347}}
 section.profile .count .item {
   position: relative;
   float: left;
@@ -616,18 +616,18 @@ section.profile .count .item {
   color: #f04e23;
   border-left: 1px solid rgba(38, 50, 56, 0.4);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000349}}
 section.profile .count .item:first-child {
   padding-left: 0;
   border-width: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000350}}
 section.profile .count .item span {
   font-size: 12px;
   font-weight: lighter;
   color: #263238;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000355}}
 section.media .item {
   width: 303.3333333333px;
   position: relative;
@@ -641,15 +641,15 @@ section.media .item {
   -o-transition: .4s;
   transition: .4s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000359}}
 section.media .item .photo {
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000361}}
 section.media .item .photo img.photo {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000362}}
 section.media .item .photo .status {
   width: 18px;
   height: 18px;
@@ -661,15 +661,15 @@ section.media .item .photo .status {
   border-radius: 50%;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000364}}
 section.media .item .photo .status.green {
   background-color: #CDDC39;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000365}}
 section.media .item .photo .status.red {
   background-color: #F44336;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000367}}
 section.media .item .photo .info {
   width: 100%;
   height: 100%;
@@ -684,46 +684,46 @@ section.media .item .photo .info {
   -o-transition: .4s;
   transition: .4s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000370}}
 section.media .item .photo .info .date {
   color: white;
   bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000372}}
 section.media .item .photo .info .date .day {
   font-size: 34px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000373}}
 section.media .item .photo .info .date .time {
   font-size: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000377}}
 section.media .item section.data {
   line-height: normal;
   padding: 10px 0;
   background-color: transparent;
   border-top: 1px solid rgba(38, 50, 56, 0.3);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000379}}
 section.media .item section.data .left {
   position: absolute;
   margin: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000380}}
 section.media .item section.data .metrics {
   position: relative;
   float: left;
   margin-left: 10px;
   color: #263238;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000382}}
 section.media .item section.data .metrics.score {
   float: right;
   font-size: 30px;
   margin-right: 20px;
   color: #f04e23;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000383}}
 section.media .item section.data .metrics.like:before {
   content: url("../img/like.svg");
   background-size: 10px 20px;
@@ -732,7 +732,7 @@ section.media .item section.data .metrics.like:before {
   margin-right: 8px;
   margin-top: -1px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000384}}
 section.media .item section.data .metrics.comment:before {
   content: url("../img/comment.svg");
   background-size: 10px 20px;
@@ -741,18 +741,18 @@ section.media .item section.data .metrics.comment:before {
   margin-right: 8px;
   margin-top: -1px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000386}}
 section.media .item section.data .percentage {
   height: 2px;
-  background-color: #f04e23;
+  background-color: #4280ca;
   position: absolute;
   bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000388}}
 section.media .item section.data .percentage:after {
   content: ' ';
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000391}}
 section.media .item:hover {
   opacity: 1 !important;
   -webkit-transform: scale(1.05);
@@ -760,22 +760,26 @@ section.media .item:hover {
   -o-transform: scale(1.05);
   transform: scale(1.05);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\0000397}}
 section.media .item:active .photo .info {
   opacity: 1;
   visibility: visible;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003105}}
 section.media .container:hover .item {
   opacity: .7;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003109}}
+section.controls {
+  padding: 0 0 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003111}}
 section.controls .order, section.controls .filters {
   position: relative;
   float: right;
   margin: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003112}}
 section.controls button {
   position: relative;
   float: left;
@@ -789,31 +793,51 @@ section.controls button {
   margin: 0 1px;
   font-weight: lighter;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003114}}
 section.controls button:hover, section.controls button.active {
   background-color: #4280ca;
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003111}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003115}}
 section.controls button:active {
   background-color: #3067a9;
   color: white;
   border-color: #4280ca;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003117}}
 section.controls button[data-sort='likes:asc']:before, section.controls button[data-sort='comments:asc']:before, section.controls button[data-sort='score:asc']:before, section.controls button[data-sort='date:asc']:before {
   content: '↓ ';
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003120}}
 section.controls button[data-sort='likes:desc']:before, section.controls button[data-sort='comments:desc']:before, section.controls button[data-sort='score:desc']:before, section.controls button[data-sort='date:desc']:before {
   content: '↑ ';
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003122}}
 section.controls button.filter {
   margin: 0 2px;
   padding: 2px 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003124}}
+section.controls button.filter span.percentage {
+  position: absolute;
+  font-size: 10px;
+  background-color: #CDDC39;
+  color: white;
+  padding: 3px 4px;
+  bottom: -24px;
+  border-radius: inherit;
+  right: 0;
+  transform: translate(50%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003126}}
+section.controls button.filter span.percentage.positive {
+  background-color: #CDDC39;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003127}}
+section.controls button.filter span.percentage.negative {
+  background-color: #F44336;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003133}}
 section.controls .indicator {
   position: relative;
   float: left;
@@ -824,15 +848,11 @@ section.controls .indicator {
   margin: 1px 20px 1px 4px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003124}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003137}}
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003129}}
-* {
   outline: none;
 }
 

@@ -51,7 +51,7 @@ function defineMediaAverageScore() {
 	});
 
 	var avg = (sum/posts.length).toFixed(2);
-	console.log(avg);
+	// console.log(avg);
 	return avg;
 }
 
@@ -64,7 +64,7 @@ function mediaApproval() {
 			var media = $(this);
 			var current = parseInt(media.attr("data-score"));
 			var status = media.find(".status");
-			if (current >= average) {
+			if (current > average) {
 				status.addClass("green");
 			} else {
 				status.addClass("red");
@@ -106,7 +106,7 @@ function graphData() {
 
 	for (var i = 0; i < scoreData.length; i++) {
 		var currentAverage = parseFloat(scoreData[i] / postCount[i]);
-		var currentAverage = Math.round(currentAverage).toFixed(2);
+		var currentAverage = currentAverage.toFixed(1);
 		averageData.push(currentAverage);
 	};
 }
@@ -193,9 +193,29 @@ function graph() {
 	var myLineChart = new Chart(ctx).Line(data, options);
 }
 
+function findIncrease(num1, num2) {
+	return ((num2 - num1) / num1 * 100);
+}
+
+function increaseIndicators() {
+	for (var i = 0; i < scoreData.length - 1; i++) {
+		var growth = findIncrease(scoreData[i], scoreData[i+1]).toFixed(1);
+		var sign = growth > 0 ? 1 : growth == 0 ? 0 : -1;
+		var tag = $("<span class='percentage'>"+growth+"%</span>");
+		if (sign == 1) {
+			tag.addClass("positive");
+		} else {
+			tag.addClass("negative");
+		}
+
+		$(".filter.month:eq("+(i + 1)+")").append(tag);
+	};
+}
+
 function monthsCompare() {
 	eliminatesMonthsFilterNotExistant();
 	graph();
+	increaseIndicators();
 }
 
 $(document).ready(function(){
