@@ -68,6 +68,16 @@
       		<section class="graphs">
       			<div class="container">
       				<canvas id="myChart" width="1000px" height="300px"></canvas>
+              <div class="legends">
+                <div class="circle orange"></div>
+                <span>Score</span>
+                <div class="circle green"></div>
+                <span>Likes</span>
+                <div class="circle blue"></div>
+                <span>Comentários</span>
+                <div class="circle"></div>
+                <span>Score/Mídia</span>
+              </div>
       			</div>
       		</section>
       		<section class="media">
@@ -81,10 +91,10 @@
       				<form action="">
       					<input type="text" name="user">
       					<input type="submit" value="Procurar">
-      				</form>		
+      				</form>
       			</div>
       		</section>
-		    	
+
       	<? } ?>
       </div>
       <footer></footer>

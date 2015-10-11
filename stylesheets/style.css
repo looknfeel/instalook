@@ -858,6 +858,40 @@ section.controls .indicator {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003139}}
+.legends {
+  float: right;
+  margin-top: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003141}}
+.legends .circle {
+  width: 18px;
+  height: 18px;
+  float: left;
+  background-color: grey;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003143}}
+.legends .circle.orange {
+  background-color: #f04e23;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003144}}
+.legends .circle.green {
+  background-color: #8bc34a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003145}}
+.legends .circle.blue {
+  background-color: #4280ca;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003147}}
+.legends span {
+  float: left;
+  font-size: 12px;
+  margin: 1px 6px 0 2px;
+  color: #666;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/kandebonfim\/Development\/Projects\/instalook\/sass\/_main\.scss}line{font-family:\00003150}}
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;

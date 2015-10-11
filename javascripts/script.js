@@ -1,4 +1,4 @@
-/* Author: 
+/* Author:
 
 Kandeb Bonfim
 
@@ -225,4 +225,13 @@ $(document).ready(function(){
 
 $(".filter").click(function(){
 	mediaApproval();
+	showHideGraphs();
 });
+
+function showHideGraphs() {
+	if ($(".filter.month.active").attr("data-filter") == "all") {
+		$("section.graphs").show();
+	} else {
+		$("section.graphs").hide();
+	}
+}

@@ -136,6 +136,17 @@ section{
 	}
 }
 
+.legends{
+	float: right; margin-top: 10px;
+	.circle{
+		width: 18px; height: 18px; float: left; background-color: grey; border-radius: 50%; border: 2px solid white;
+		&.orange{background-color: rgba(240,78,35,1);}
+		&.green{background-color: rgba(139,195,74,1);}
+		&.blue{background-color: rgba(66,128,202,1);}
+	}
+	span{float: left; font-size: 12px; margin: 1px 6px 0 2px; color: #666}
+}
+
 *{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
