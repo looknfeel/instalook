@@ -73,6 +73,7 @@ section{
 						.day{font-size: 34px;}
 						.time{font-size: 20px;}
 					}
+					.caption{font-size: 12px; margin-top: 10px;}
 				}
 			}
 			section.data{
@@ -123,7 +124,7 @@ section{
 			&.filter{
 				margin: 0 2px; padding: 2px 3px;
 				span.percentage{
-					position: absolute; font-size: 10px; background-color: $positive; color: white; padding: 3px 4px; bottom: -24px; border-radius: inherit; right: 0; transform: translate(50%);
+					position: absolute; font-size: 10px; background-color: $positive; color: white; padding: 3px 4px; bottom: -24px; border-radius: inherit; right: -10px; transform: translate(50%);
 					&.positive{background-color: $positive;}
 					&.negative{background-color: $negative;
 						// top: -24px; bottom: initial;

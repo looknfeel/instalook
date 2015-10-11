@@ -1,3 +1,4 @@
+<script>document.title = "@<?= $info['username'] ?> | Instalook";</script>
 <?
 $media_result = user_media($id);
 $next = true;
@@ -20,6 +21,7 @@ $first = true;
 							<div class="date">
 								<div class="day"><?= $date[0] ?></div>
 								<div class="time"><?= $date[1] ?></div>
+								<div class="caption"><?= $media["caption"]["text"] ?></div>
 							</div>
 						</div>
 					</div>
