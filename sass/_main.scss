@@ -28,7 +28,30 @@ section{
 		input[type=submit]{padding: 12px; }
 	}
 	&.graphs{
-		background-color: darken($base, 4deg); padding: 20px 0;
+		background-color: darken($base, 4deg); padding: 20px 0; color: $dark;
+		&#month{ display: none; }
+		p{text-align: center; font-size: 22px;}
+		.collumn{
+			width: (100% / 3); float: left; text-align: center;
+			h2{font-size: 18px; font-weight: lighter; margin: 0;}
+		}
+		.data{
+			display: inline-block;
+			&.previous{font-size: 26px; line-height: 32px;}
+			&.current{
+				font-size: 34px; font-weight: bolder; color: $orange;
+				&:before{content: "/"; color: transparentize($dark, .5);}
+				span.sub{margin-left: 20px}
+			}
+			&.previous, &.current{
+				span.sub{font-size: 12px; display: block; margin-top: -8px;}
+			}
+			&.percentage{
+				background-color: $dark; color: $base; padding: 3px; padding: 4px 6px; font-size: 12px; transform: translateY(-23px); border-radius: 3px;
+				&.positive{background-color: $positive;}
+				&.negative{background-color: $negative;}
+			}
+		}
 	}
 	&.profile{
 		img.profile{width: 150px; height: 150px; border-radius: 50%; position: relative; float: left; border: 6px solid $orange;}
