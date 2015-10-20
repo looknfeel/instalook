@@ -84,7 +84,7 @@ section{
 				position: relative;
 				img.photo{width: 100%}
 				.status{
-					position: absolute; top: -12px; right: 0; font-size: 16px; color: transparent;
+					position: absolute; top: -8px; right: 0; font-size: 12px; color: transparent;
 					&.green{color: $positive;}
 					&.red{color: $negative;}
 				}
