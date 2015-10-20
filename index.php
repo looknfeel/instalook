@@ -65,7 +65,7 @@
 							</div>
       			</div>
       		</section>
-      		<section class="graphs">
+      		<section class="graphs" id="all">
       			<div class="container">
       				<canvas id="myChart" width="1000px" height="300px"></canvas>
               <div class="legends">
@@ -80,6 +80,46 @@
               </div>
       			</div>
       		</section>
+          <section class="graphs" id="month">
+            <div class="container">
+              <!-- <p>No previous data available.</p> -->
+              <div class="collumn">
+                <h2>Pontuação total</h2>
+                <div class="data previous">
+                  <span class="js-data" id="js-prev-pont">--</span>
+                  <span class="sub js-prev-mont">jul/15</span>
+                </div>
+                <div class="data current">
+                  <span class="js-data" id="js-curr-pont">--</span>
+                  <span class="sub js-curr-mont">jul/15</span>
+                </div>
+                <div class="data percentage" id="js-diff-pont">200%</div>
+              </div>
+              <div class="collumn">
+                <h2>Pontuação média</h2>
+                <div class="data previous">
+                  <span class="js-data" id="js-prev-aver">--</span>
+                  <span class="sub js-prev-mont">jul/15</span>
+                </div>
+                <div class="data current">
+                  <span class="js-data" id="js-curr-aver">--</span>
+                  <span class="sub js-curr-mont">jul/15</span>
+                </div>
+                <div class="data percentage" id="js-diff-medi">200%</div>
+              </div>
+              <div class="collumn">
+                <h2>Mídias</h2>
+                <div class="data previous">
+                  <span class="js-data" id="js-prev-medi">--</span>
+                  <span class="sub js-prev-mont">jul/15</span>
+                </div>
+                <div class="data current">
+                  <span class="js-data" id="js-curr-medi">--</span>
+                  <span class="sub js-curr-mont">jul/15</span>
+                </div>
+              </div>
+            </div>
+          </section>
       		<section class="media">
       			<div class="container">
       				<? include('inc/_media.php'); ?>

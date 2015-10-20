@@ -26,6 +26,7 @@ $first = true;
 						</div>
 					</div>
 					<div class="status"></div>
+					<a href="<?= $media['link'] ?>" target="_new" class="link"></a>
 				</div>
 				<section class="data">
 					<div class="left">

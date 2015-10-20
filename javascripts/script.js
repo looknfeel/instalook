@@ -55,24 +55,6 @@ function defineMediaAverageScore() {
 	return avg;
 }
 
-function mediaApproval() {
-	$(".status").removeClass("green red");
-	setTimeout(function(){
-		var average = defineMediaAverageScore();
-		var posts = $(".item.mix:visible");
-		posts.each(function(){
-			var media = $(this);
-			var current = parseInt(media.attr("data-score"));
-			var status = media.find(".status");
-			if (current > average) {
-				status.addClass("green");
-			} else {
-				status.addClass("red");
-			}
-		});
-	}, 2000);
-}
-
 function graphData() {
 	likesData = [];
 	commentsData = [];
@@ -113,9 +95,11 @@ function graphData() {
 
 function graphLabels() {
 	labels = [];
+	monthsNames = [];
 	for (var i = 0; i < postCount.length; i++) {
 		var monthLabel = $(".filter[data-filter=\\."+monthsWithPosts[i]+"]").text();
 		labels[i] = monthLabel+" ("+postCount[i]+")";
+		monthsNames[i] = monthLabel;
 	};
 }
 
@@ -218,6 +202,88 @@ function monthsCompare() {
 	increaseIndicators();
 }
 
+function mediaApproval() {
+	$(".status").removeClass("green red");
+	setTimeout(function(){
+		if ($(".filter.month.active").attr("data-filter") == "all") {
+			var average = defineMediaAverageScore();
+		} else {
+			var average = previous.scoreAverage;
+		}
+		var posts = $(".item.mix:visible");
+		posts.each(function(){
+			var media = $(this);
+			var current = parseInt(media.attr("data-score"));
+			var status = media.find(".status");
+			var percentage = findIncrease(average, current).toFixed(1);
+			status.text(percentage+'%');
+			if (percentage >= 8) {
+				status.addClass("green");
+			} else {
+				status.addClass("red");
+			}
+		});
+	}, 2000);
+}
+
+function getMonthsData(monthIndex) {
+	if (monthIndex >= 1) {
+
+		monthIndex--;
+		current = {};
+		current.month = monthsNames[monthIndex];
+		current.totalScore = scoreData[monthIndex];
+		current.scoreAverage = averageData[monthIndex];
+		current.mediaCount = postCount[monthIndex];
+		// console.log(current);
+
+		monthIndex--;
+		previous = {};
+		previous.month = monthsNames[monthIndex];
+		previous.totalScore = scoreData[monthIndex];
+		previous.scoreAverage = averageData[monthIndex];
+		previous.mediaCount = postCount[monthIndex];
+		// console.log(previous);
+
+		diff = {};
+		diff.totalScore = findIncrease(previous.totalScore, current.totalScore).toFixed(1);
+		diff.scoreAverage = findIncrease(previous.scoreAverage, current.scoreAverage).toFixed(1);
+		console.log(diff);
+
+		applyMonthsData();
+	};
+}
+
+function applyMonthsData() {
+	$(".js-data").text('--');
+
+	$(".js-prev-mont").text(previous.month);
+	$(".js-curr-mont").text(current.month);
+
+	$("#js-prev-pont").text(previous.totalScore);
+	$("#js-prev-aver").text(previous.scoreAverage);
+	$("#js-prev-medi").text(previous.mediaCount);
+	$("#js-curr-pont").text(current.totalScore);
+	$("#js-curr-aver").text(current.scoreAverage);
+	$("#js-curr-medi").text(current.mediaCount);
+
+	$(".data.percentage").removeClass('positive negative');
+
+	$("#js-diff-pont").text(diff.totalScore+"%");
+	if (diff.totalScore >= 8) {
+		$("#js-diff-pont").addClass('positive')
+	} else {
+		$("#js-diff-pont").addClass('negative')
+	}
+
+	$("#js-diff-medi").text(diff.scoreAverage+"%");
+	if (diff.scoreAverage >= 8) {
+		$("#js-diff-medi").addClass('positive')
+	} else {
+		$("#js-diff-medi").addClass('negative')
+	}
+}
+
 $(document).ready(function(){
 	monthsCompare();
 	mediaApproval();
@@ -226,12 +292,15 @@ $(document).ready(function(){
 $(".filter").click(function(){
 	mediaApproval();
 	showHideGraphs();
+	getMonthsData($(this).index());
 });
 
 function showHideGraphs() {
 	if ($(".filter.month.active").attr("data-filter") == "all") {
-		$("section.graphs").show();
+		$("section.graphs#all").show();
+		$("section.graphs#month").hide();
 	} else {
-		$("section.graphs").hide();
+		$("section.graphs#all").hide();
+		$("section.graphs#month").show();
 	}
 }
