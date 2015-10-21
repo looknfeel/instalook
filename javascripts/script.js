@@ -184,9 +184,8 @@ function findIncrease(num1, num2) {
 function increaseIndicators() {
 	for (var i = 0; i < scoreData.length - 1; i++) {
 		var growth = findIncrease(scoreData[i], scoreData[i+1]).toFixed(1);
-		var sign = growth > 0 ? 1 : growth == 0 ? 0 : -1;
 		var tag = $("<span class='percentage'>"+growth+"%</span>");
-		if (sign == 1) {
+		if (growth >= 8) {
 			tag.addClass("positive");
 		} else {
 			tag.addClass("negative");
